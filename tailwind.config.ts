@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,7 +65,7 @@ export default {
 				brand: {
 					DEFAULT: '#000000',
 					muted: '#333333',
-					accent: '#10B981',
+					accent: '#F97316',
 					light: '#F9FAFB',
 					dark: '#111827'
 				},
@@ -151,3 +150,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

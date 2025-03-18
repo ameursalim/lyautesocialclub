@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -17,24 +16,24 @@ const About = () => {
           <div className="order-2 lg:order-1 stagger-animate">
             <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-6">Le Meilleur du Padel à Kénitra</h2>
             <p className="text-gray-600 mb-6">
-              Le Club Social Lyautey est bien plus que de simples terrains de padel — c'est une communauté de joueurs passionnés et un centre de connexion sociale à Kénitra. Nos installations de pointe sont conçues pour offrir l'environnement parfait aux joueurs de tous niveaux.
+              Bienvenue au nouveau centre de padel de Kénitra ! Notre complexe moderne met à votre disposition deux terrains de padel de qualité supérieure, offrant une expérience de jeu exceptionnelle pour tous les passionnés de ce sport dynamique.
             </p>
             <p className="text-gray-600 mb-6">
-              Fondé en 2013, nous sommes devenus la destination privilégiée des amateurs de padel dans la région de Kénitra. Notre équipe de coachs expérimentés est dédiée à vous aider à améliorer vos compétences, que vous soyez débutant ou joueur chevronné.
+              Notre équipe de trois coachs professionnels est là pour vous accompagner dans votre progression, que vous soyez débutant ou joueur confirmé. Nous nous engageons à créer une communauté padel vibrante et accueillante à Kénitra.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <p className="text-3xl font-bold text-brand-accent">10+</p>
-                <p className="text-gray-600 text-sm">Années d'Expérience</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <p className="text-3xl font-bold text-brand-accent">6</p>
+                <p className="text-3xl font-bold text-brand-accent">2</p>
                 <p className="text-gray-600 text-sm">Terrains Premium</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <p className="text-3xl font-bold text-brand-accent">8</p>
+                <p className="text-3xl font-bold text-brand-accent">3</p>
                 <p className="text-gray-600 text-sm">Coachs Professionnels</p>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg text-center">
+                <p className="text-3xl font-bold text-brand-accent">7j/7</p>
+                <p className="text-gray-600 text-sm">Disponibilité</p>
               </div>
             </div>
             
@@ -55,7 +54,6 @@ const About = () => {
                 />
               </div>
               
-              {/* Floating elements */}
               <div className="absolute -bottom-6 -right-6 glass rounded-xl p-4 shadow-glass animate-slide-up">
                 <div className="flex items-center space-x-3">
                   <div className="p-3 bg-brand-accent/10 rounded-full">
@@ -246,3 +244,4 @@ const Index = () => {
 };
 
 export default Index;
+
