@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,132 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-glass;
+  }
+  
+  .glass-dark {
+    @apply bg-black/60 backdrop-blur-sm border border-white/10 shadow-glass;
+  }
+
+  .section-container {
+    @apply container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+
+  .stagger-animate > * {
+    @apply opacity-0;
+    transform: translateY(10px);
+    animation: staggerFade 0.3s ease forwards;
+  }
+
+  .parallax-bg {
+    @apply absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-10;
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .link-hover {
+    @apply relative after:absolute after:bg-brand-accent after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .btn-hover-fx {
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1 active:translate-y-0 active:shadow-sm;
+  }
+
+  .booking-date {
+    @apply relative flex items-center justify-center h-10 w-10 rounded-full cursor-pointer transition-all duration-200 hover:bg-gray-200;
+  }
+
+  .booking-date.selected {
+    @apply bg-brand-accent text-white font-medium;
+  }
+
+  .booking-date.inactive {
+    @apply text-gray-300 cursor-default hover:bg-transparent;
+  }
+
+  .time-slot {
+    @apply relative flex flex-col items-center justify-center p-4 rounded-lg border border-gray-200 transition-all duration-200 hover:border-brand-accent cursor-pointer;
+  }
+
+  .time-slot.selected {
+    @apply border-brand-accent bg-brand-accent/5;
+  }
+
+  .time-slot.inactive {
+    @apply opacity-50 cursor-default hover:border-gray-200;
+  }
+
+  @keyframes staggerFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.stagger-animate > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animate > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animate > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animate > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animate > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animate > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-animate > *:nth-child(7) { animation-delay: 0.7s; }
+.stagger-animate > *:nth-child(8) { animation-delay: 0.8s; }
+.stagger-animate > *:nth-child(9) { animation-delay: 0.9s; }
+.stagger-animate > *:nth-child(10) { animation-delay: 1s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Calendar styles */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.availability-dot {
+  @apply inline-block w-2 h-2 rounded-full bg-brand-accent;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }

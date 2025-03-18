@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				brand: {
+					DEFAULT: '#000000',
+					muted: '#333333',
+					accent: '#10B981',
+					light: '#F9FAFB',
+					dark: '#111827'
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +92,61 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				slideDown: {
+					'0%': { transform: 'translateY(-10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				zoomIn: {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				pulse: {
+					'0%, 100%': { 
+						opacity: '1',
+						transform: 'scale(1)' 
+					},
+					'50%': { 
+						opacity: '0.85',
+						transform: 'scale(0.98)' 
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.6s ease-out',
+				'slide-up': 'slideUp 0.6s ease-out',
+				'slide-down': 'slideDown 0.6s ease-out',
+				'zoom-in': 'zoomIn 0.6s ease-out',
+				'pulse-slow': 'pulse 3s ease-in-out infinite',
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['SF Pro Display', 'Inter', 'sans-serif']
+			},
+			boxShadow: {
+				'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+				'elevation': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+				'glass': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+				'intense': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+			},
+			backdropFilter: {
+				'none': 'none',
+				'blur': 'blur(8px)',
+			},
+			height: {
+				'screen-80': '80vh',
+				'screen-90': '90vh',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
