@@ -36,23 +36,23 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
-              Home
+              Accueil
             </Link>
             <a href="#services" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               Services
             </a>
             <a href="#about" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
-              About Us
+              À Propos
             </a>
             <Link to="/booking" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
-              Book a Court
+              Réserver
             </Link>
             <Button 
               asChild 
               className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx"
             >
               <Link to="/booking">
-                Book Now
+                Réserver
               </Link>
             </Button>
           </nav>
@@ -77,7 +77,7 @@ const Navbar = () => {
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              Accueil
             </Link>
             <a 
               href="#services" 
@@ -91,21 +91,21 @@ const Navbar = () => {
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
-              About Us
+              À Propos
             </a>
             <Link 
               to="/booking" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
-              Book a Court
+              Réserver
             </Link>
             <Button 
               asChild 
               className="w-full bg-white text-brand-dark hover:bg-brand-accent hover:text-white"
             >
               <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
-                Book Now
+                Réserver Maintenant
               </Link>
             </Button>
           </div>

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 sm:py-28">
+    <section id="about" className="py-12 sm:py-16">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 stagger-animate">
@@ -87,9 +88,9 @@ const About = () => {
 
 const Features = () => {
   return (
-    <section className="py-20 sm:py-28 bg-gray-50">
+    <section className="py-12 sm:py-16 bg-gray-50">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
+        <div className="text-center max-w-3xl mx-auto mb-12 stagger-animate">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Pourquoi Choisir le Club Lyautey à Kénitra ?</h2>
           <p className="text-gray-600 text-lg">
             Découvrez la différence avec nos installations et services premium
@@ -134,9 +135,9 @@ const Features = () => {
 
 const Testimonials = () => {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-12 sm:py-16">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
+        <div className="text-center max-w-3xl mx-auto mb-12 stagger-animate">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Ce Que Disent Nos Membres</h2>
           <p className="text-gray-600 text-lg">
             Écoutez les joueurs qui ont transformé leur jeu au Club Social Lyautey de Kénitra
@@ -148,12 +149,12 @@ const Testimonials = () => {
             {
               quote: "Le programme de coaching à Lyautey a complètement transformé mon jeu. En seulement trois mois, je suis passé de débutant complet à jouer des matchs en toute confiance.",
               name: "Sarah Johnson",
-              role: "Membre depuis 2021"
+              role: "Membre depuis 2023"
             },
             {
               quote: "Les installations sont de premier ordre et le système de réservation est incroyablement facile à utiliser. J'adore pouvoir réserver un terrain à tout moment grâce au système en ligne.",
               name: "Michael Chen",
-              role: "Membre depuis 2019"
+              role: "Membre depuis 2023"
             },
             {
               quote: "Mes enfants adorent absolument le programme pour enfants. Les coachs sont incroyables avec eux et ils se sont tellement améliorés tout en s'amusant.",
@@ -191,7 +192,7 @@ const Testimonials = () => {
 
 const CallToAction = () => {
   return (
-    <section className="py-16 sm:py-20 bg-brand-dark">
+    <section className="py-12 sm:py-16 bg-brand-dark">
       <div className="section-container">
         <div className="bg-gradient-to-r from-brand-accent to-brand-accent/80 rounded-3xl p-8 sm:p-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -244,4 +245,3 @@ const Index = () => {
 };
 
 export default Index;
-
