@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Trophy, Users, ChevronRight } from "lucide-react";
@@ -14,12 +15,12 @@ const About = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 stagger-animate">
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-6">Votre Expérience Padel Premium</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-6">Le Meilleur du Padel à Kénitra</h2>
             <p className="text-gray-600 mb-6">
-              Le Club Social Lyautey est bien plus que de simples terrains de padel — c'est une communauté de joueurs passionnés et un centre de connexion sociale. Nos installations de pointe sont conçues pour offrir l'environnement parfait aux joueurs de tous niveaux.
+              Le Club Social Lyautey est bien plus que de simples terrains de padel — c'est une communauté de joueurs passionnés et un centre de connexion sociale à Kénitra. Nos installations de pointe sont conçues pour offrir l'environnement parfait aux joueurs de tous niveaux.
             </p>
             <p className="text-gray-600 mb-6">
-              Fondé en 2013, nous sommes devenus la destination privilégiée des amateurs de padel. Notre équipe de coachs expérimentés est dédiée à vous aider à améliorer vos compétences, que vous soyez débutant ou joueur chevronné.
+              Fondé en 2013, nous sommes devenus la destination privilégiée des amateurs de padel dans la région de Kénitra. Notre équipe de coachs expérimentés est dédiée à vous aider à améliorer vos compétences, que vous soyez débutant ou joueur chevronné.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -48,7 +49,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevation">
                 <img 
-                  src="/lovable-uploads/ca7f6cc4-ac5e-4faa-bef9-c31cfd48c8c1.png" 
+                  src="/lovable-uploads/21205f13-c615-4b89-a962-f71c5963dfcf.png" 
                   alt="Terrain de Padel" 
                   className="w-full h-full object-cover"
                 />
@@ -91,7 +92,7 @@ const Features = () => {
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Pourquoi Choisir le Club Lyautey ?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Pourquoi Choisir le Club Lyautey à Kénitra ?</h2>
           <p className="text-gray-600 text-lg">
             Découvrez la différence avec nos installations et services premium
           </p>
@@ -112,7 +113,7 @@ const Features = () => {
             {
               icon: <Trophy className="h-8 w-8 text-brand-accent" />,
               title: "Événements Communautaires",
-              description: "Tournois réguliers et rassemblements sociaux pour rencontrer d'autres passionnés de padel"
+              description: "Tournois réguliers et rassemblements sociaux pour rencontrer d'autres passionnés de padel à Kénitra"
             },
           ].map((feature, index) => (
             <div 
@@ -140,7 +141,7 @@ const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Ce Que Disent Nos Membres</h2>
           <p className="text-gray-600 text-lg">
-            Écoutez les joueurs qui ont transformé leur jeu au Club Social Lyautey
+            Écoutez les joueurs qui ont transformé leur jeu au Club Social Lyautey de Kénitra
           </p>
         </div>
         
@@ -199,7 +200,7 @@ const CallToAction = () => {
             <div className="text-center lg:text-left stagger-animate">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Prêt à Jouer ?</h2>
               <p className="text-white/80 text-lg max-w-xl">
-                Réservez votre terrain maintenant et découvrez pourquoi le Club Social Lyautey offre l'expérience de padel premium dans la ville.
+                Réservez votre terrain maintenant et découvrez pourquoi le Club Social Lyautey offre l'expérience de padel premium à Kénitra.
               </p>
             </div>
             
@@ -234,6 +235,7 @@ const Index = () => {
         <Hero />
         <Services />
         <About />
+        <Gallery />
         <Features />
         <Testimonials />
         <CallToAction />

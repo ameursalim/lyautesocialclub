@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-8 stagger-animate">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent font-medium text-sm">
-              <span className="animate-pulse mr-2">●</span> Expérience Padel Premium
+              <span className="animate-pulse mr-2">●</span> Expérience Padel Premium à Kénitra
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-brand-dark leading-tight">
@@ -29,7 +29,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg text-gray-700 max-w-lg text-pretty">
-              Découvrez l'alliance parfaite entre sport et connexion sociale au Club Social Lyautey.
+              Découvrez l'alliance parfaite entre sport et connexion sociale au Club Social Lyautey à Kénitra.
               Des terrains de padel de classe mondiale, un coaching expert et une communauté dynamique vous attendent.
             </p>
             
@@ -53,7 +53,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-3xl blur-xl opacity-70 animate-pulse-slow"></div>
               <div className="bg-white rounded-3xl overflow-hidden shadow-elevation relative z-10">
                 <img 
-                  src="/lovable-uploads/ca7f6cc4-ac5e-4faa-bef9-c31cfd48c8c1.png" 
+                  src="/lovable-uploads/465f9e3f-c26c-4b40-bd57-81ef3942c691.png" 
                   alt="Joueur de Padel" 
                   className="w-full h-[500px] object-cover"
                 />

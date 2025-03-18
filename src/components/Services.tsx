@@ -15,7 +15,7 @@ const services = [
   {
     icon: <CalendarRange className="h-10 w-10 text-brand-accent" />,
     title: "Location de Terrains",
-    description: "Réservez nos terrains de padel premium à l'heure. Parfait pour des parties occasionnelles, des séances d'entraînement régulières ou des matchs compétitifs."
+    description: "Réservez nos terrains de padel premium à l'heure. Parfait pour des parties occasionnelles, des séances d'entraînement régulières ou des matchs compétitifs à Kénitra."
   },
   {
     icon: <Users className="h-10 w-10 text-brand-accent" />,
@@ -30,7 +30,7 @@ const services = [
   {
     icon: <Trophy className="h-10 w-10 text-brand-accent" />,
     title: "Tournois",
-    description: "Événements compétitifs réguliers pour les joueurs de tous niveaux. Rejoignez nos tournois communautaires et testez vos compétences dans une atmosphère amicale."
+    description: "Événements compétitifs réguliers pour les joueurs de tous niveaux. Rejoignez nos tournois communautaires à Kénitra et testez vos compétences dans une atmosphère amicale."
   },
   {
     icon: <Dumbbell className="h-10 w-10 text-brand-accent" />,
@@ -40,7 +40,7 @@ const services = [
   {
     icon: <ShoppingBag className="h-10 w-10 text-brand-accent" />,
     title: "Pro Shop",
-    description: "Équipement et vêtements de padel haut de gamme. Conseils d'experts pour vous aider à trouver l'équipement parfait pour votre jeu."
+    description: "Équipement et vêtements de padel haut de gamme. Conseils d'experts pour vous aider à trouver l'équipement parfait pour votre jeu au Club Social Lyautey de Kénitra."
   }
 ];
 
@@ -51,7 +51,7 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Nos Services Premium</h2>
           <p className="text-gray-600 text-lg">
-            Au Club Social Lyautey, nous proposons des services complets de padel pour améliorer votre jeu et votre expérience.
+            Au Club Social Lyautey de Kénitra, nous proposons des services complets de padel pour améliorer votre jeu et votre expérience.
           </p>
         </div>
         
