@@ -4,7 +4,7 @@ import {
   Users, 
   GraduationCap, 
   Trophy, 
-  Racquet, 
+  Tennis, 
   ShoppingBag 
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -33,7 +33,7 @@ const services = [
     description: "Regular competitive events for players of all levels. Join our community tournaments and test your skills in a friendly atmosphere."
   },
   {
-    icon: <Racquet className="h-10 w-10 text-brand-accent" />,
+    icon: <Tennis className="h-10 w-10 text-brand-accent" />,
     title: "Equipment Rental",
     description: "Quality padel racquets and balls available for rent. Try before you buy or travel light knowing we've got you covered."
   },
