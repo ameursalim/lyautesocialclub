@@ -19,29 +19,29 @@ const Hero = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-8 stagger-animate">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent font-medium text-sm">
-              <span className="animate-pulse mr-2">●</span> Premier Padel Experience
+              <span className="animate-pulse mr-2">●</span> Expérience Padel Premium
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-brand-dark leading-tight">
-              Elevate Your <br />
-              <span className="text-brand-accent">Padel Game</span> <br />
-              at Lyautey Club
+              Élevez Votre <br />
+              <span className="text-brand-accent">Jeu de Padel</span> <br />
+              au Club Lyautey
             </h1>
             
             <p className="text-lg text-gray-700 max-w-lg text-pretty">
-              Experience the perfect blend of sport and social connection at Lyautey Social Club. 
-              World-class padel courts, expert coaching, and a vibrant community await you.
+              Découvrez l'alliance parfaite entre sport et connexion sociale au Club Social Lyautey.
+              Des terrains de padel de classe mondiale, un coaching expert et une communauté dynamique vous attendent.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx">
                 <Link to="/booking">
-                  Book a Court <ChevronRight size={16} className="ml-1" />
+                  Réserver un Terrain <ChevronRight size={16} className="ml-1" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white btn-hover-fx">
                 <a href="#services">
-                  Explore Services
+                  Explorer nos Services
                 </a>
               </Button>
             </div>
@@ -53,8 +53,8 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-3xl blur-xl opacity-70 animate-pulse-slow"></div>
               <div className="bg-white rounded-3xl overflow-hidden shadow-elevation relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Padel Court" 
+                  src="/lovable-uploads/ca7f6cc4-ac5e-4faa-bef9-c31cfd48c8c1.png" 
+                  alt="Joueur de Padel" 
                   className="w-full h-[500px] object-cover"
                 />
               </div>
@@ -63,19 +63,19 @@ const Hero = () => {
               <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-6 shadow-glass animate-slide-up">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <p className="text-gray-600 text-sm">Courts</p>
+                    <p className="text-gray-600 text-sm">Terrains</p>
                     <p className="text-3xl font-bold text-brand-dark">6</p>
                   </div>
                   <div>
-                    <p className="text-gray-600 text-sm">Coaches</p>
+                    <p className="text-gray-600 text-sm">Coachs</p>
                     <p className="text-3xl font-bold text-brand-dark">8</p>
                   </div>
                   <div>
-                    <p className="text-gray-600 text-sm">Members</p>
+                    <p className="text-gray-600 text-sm">Membres</p>
                     <p className="text-3xl font-bold text-brand-dark">500+</p>
                   </div>
                   <div>
-                    <p className="text-gray-600 text-sm">Years</p>
+                    <p className="text-gray-600 text-sm">Années</p>
                     <p className="text-3xl font-bold text-brand-dark">10</p>
                   </div>
                 </div>

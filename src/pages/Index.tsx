@@ -14,32 +14,32 @@ const About = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 stagger-animate">
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-6">Your Premium Padel Experience</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-6">Votre Expérience Padel Premium</h2>
             <p className="text-gray-600 mb-6">
-              Lyautey Social Club is more than just padel courts — it's a community of passionate players and a hub for social connection. Our state-of-the-art facilities are designed to provide the perfect environment for players of all levels.
+              Le Club Social Lyautey est bien plus que de simples terrains de padel — c'est une communauté de joueurs passionnés et un centre de connexion sociale. Nos installations de pointe sont conçues pour offrir l'environnement parfait aux joueurs de tous niveaux.
             </p>
             <p className="text-gray-600 mb-6">
-              Founded in 2013, we've grown to become the premier destination for padel enthusiasts. Our team of experienced coaches is dedicated to helping you improve your skills, whether you're a beginner or a seasoned player.
+              Fondé en 2013, nous sommes devenus la destination privilégiée des amateurs de padel. Notre équipe de coachs expérimentés est dédiée à vous aider à améliorer vos compétences, que vous soyez débutant ou joueur chevronné.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-gray-50 p-4 rounded-lg text-center">
                 <p className="text-3xl font-bold text-brand-accent">10+</p>
-                <p className="text-gray-600 text-sm">Years Experience</p>
+                <p className="text-gray-600 text-sm">Années d'Expérience</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
                 <p className="text-3xl font-bold text-brand-accent">6</p>
-                <p className="text-gray-600 text-sm">Premium Courts</p>
+                <p className="text-gray-600 text-sm">Terrains Premium</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
                 <p className="text-3xl font-bold text-brand-accent">8</p>
-                <p className="text-gray-600 text-sm">Professional Coaches</p>
+                <p className="text-gray-600 text-sm">Coachs Professionnels</p>
               </div>
             </div>
             
             <Button asChild className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx">
               <Link to="/booking">
-                Book Your Session <ChevronRight size={16} className="ml-1" />
+                Réservez Votre Session <ChevronRight size={16} className="ml-1" />
               </Link>
             </Button>
           </div>
@@ -48,8 +48,8 @@ const About = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevation">
                 <img 
-                  src="https://images.unsplash.com/photo-1622279488480-1b753f9bd48b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Padel Court" 
+                  src="/lovable-uploads/ca7f6cc4-ac5e-4faa-bef9-c31cfd48c8c1.png" 
+                  alt="Terrain de Padel" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -61,8 +61,8 @@ const About = () => {
                     <Calendar className="h-6 w-6 text-brand-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Open Daily</p>
-                    <p className="font-medium">8:00 AM - 10:00 PM</p>
+                    <p className="text-sm text-gray-500">Ouvert Tous les Jours</p>
+                    <p className="font-medium">8h00 - 22h00</p>
                   </div>
                 </div>
               </div>
@@ -73,8 +73,8 @@ const About = () => {
                     <Trophy className="h-6 w-6 text-brand-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Monthly</p>
-                    <p className="font-medium">Tournaments & Events</p>
+                    <p className="text-sm text-gray-500">Mensuel</p>
+                    <p className="font-medium">Tournois & Événements</p>
                   </div>
                 </div>
               </div>
@@ -91,9 +91,9 @@ const Features = () => {
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Why Choose Lyautey Club?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Pourquoi Choisir le Club Lyautey ?</h2>
           <p className="text-gray-600 text-lg">
-            Experience the difference with our premium facilities and services
+            Découvrez la différence avec nos installations et services premium
           </p>
         </div>
         
@@ -101,18 +101,18 @@ const Features = () => {
           {[
             {
               icon: <Users className="h-8 w-8 text-brand-accent" />,
-              title: "Expert Coaching",
-              description: "Learn from certified professionals who are passionate about developing your padel skills"
+              title: "Coaching Expert",
+              description: "Apprenez avec des professionnels certifiés passionnés par le développement de vos compétences en padel"
             },
             {
               icon: <Calendar className="h-8 w-8 text-brand-accent" />,
-              title: "Flexible Booking",
-              description: "Easy online reservation system with 24/7 availability to fit your schedule"
+              title: "Réservation Flexible",
+              description: "Système de réservation en ligne facile disponible 24/7 pour s'adapter à votre emploi du temps"
             },
             {
               icon: <Trophy className="h-8 w-8 text-brand-accent" />,
-              title: "Community Events",
-              description: "Regular tournaments and social gatherings to connect with other padel enthusiasts"
+              title: "Événements Communautaires",
+              description: "Tournois réguliers et rassemblements sociaux pour rencontrer d'autres passionnés de padel"
             },
           ].map((feature, index) => (
             <div 
@@ -138,28 +138,28 @@ const Testimonials = () => {
     <section className="py-20 sm:py-28">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">What Our Members Say</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Ce Que Disent Nos Membres</h2>
           <p className="text-gray-600 text-lg">
-            Hear from players who have transformed their game at Lyautey Social Club
+            Écoutez les joueurs qui ont transformé leur jeu au Club Social Lyautey
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {[
             {
-              quote: "The coaching program at Lyautey has completely transformed my game. In just three months, I've gone from a complete beginner to confidently playing matches.",
+              quote: "Le programme de coaching à Lyautey a complètement transformé mon jeu. En seulement trois mois, je suis passé de débutant complet à jouer des matchs en toute confiance.",
               name: "Sarah Johnson",
-              role: "Member since 2021"
+              role: "Membre depuis 2021"
             },
             {
-              quote: "The facilities are top-notch and the booking system is incredibly easy to use. I love being able to reserve a court at any time through the online system.",
+              quote: "Les installations sont de premier ordre et le système de réservation est incroyablement facile à utiliser. J'adore pouvoir réserver un terrain à tout moment grâce au système en ligne.",
               name: "Michael Chen",
-              role: "Member since 2019"
+              role: "Membre depuis 2019"
             },
             {
-              quote: "My kids absolutely love the children's program. The coaches are amazing with them and they've improved so much while having a great time.",
+              quote: "Mes enfants adorent absolument le programme pour enfants. Les coachs sont incroyables avec eux et ils se sont tellement améliorés tout en s'amusant.",
               name: "Sophia Rodriguez",
-              role: "Parent of junior players"
+              role: "Parent de joueurs juniors"
             }
           ].map((testimonial, index) => (
             <div 
@@ -197,21 +197,21 @@ const CallToAction = () => {
         <div className="bg-gradient-to-r from-brand-accent to-brand-accent/80 rounded-3xl p-8 sm:p-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left stagger-animate">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Play?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Prêt à Jouer ?</h2>
               <p className="text-white/80 text-lg max-w-xl">
-                Book your court now and discover why Lyautey Social Club offers the premier padel experience in the city.
+                Réservez votre terrain maintenant et découvrez pourquoi le Club Social Lyautey offre l'expérience de padel premium dans la ville.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
               <Button asChild size="lg" className="bg-white text-brand-accent hover:bg-white/90 btn-hover-fx">
                 <Link to="/booking">
-                  Book a Court <ChevronRight size={16} className="ml-1" />
+                  Réserver un Terrain <ChevronRight size={16} className="ml-1" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-brand-accent btn-hover-fx">
                 <a href="#services">
-                  Explore Services
+                  Explorer les Services
                 </a>
               </Button>
             </div>
