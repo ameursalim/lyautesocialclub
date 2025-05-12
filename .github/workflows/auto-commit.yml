@@ -1,0 +1,85 @@
+name: Auto Commit Changes
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allow manual triggering
+  workflow_dispatch:
+  # Watch for changes in the /src directory
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Detect Changes
+        id: changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          
+          # Check for changes in the src directory
+          if [[ -n $(git status --porcelain src/) ]]; then
+            echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+            echo "Changes detected in src directory"
+          else
+            echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
+            echo "No changes detected in src directory"
+          fi
+      
+      - name: Determine Commit Type
+        if: ${{ env.CHANGES_DETECTED == 'true' }}
+        id: commit-type
+        run: |
+          # Detect file types that were changed
+          if [[ -n $(git status --porcelain src/ | grep "\.test\.[jt]sx\?$") ]]; then
+            echo "COMMIT_TYPE=test" >> $GITHUB_ENV
+          elif [[ -n $(git status --porcelain src/ | grep "\.md$") ]]; then
+            echo "COMMIT_TYPE=docs" >> $GITHUB_ENV
+          elif [[ -n $(git status --porcelain src/ | grep "app\|page\|route\.[jt]sx\?$") ]]; then
+            echo "COMMIT_TYPE=feat" >> $GITHUB_ENV
+          elif [[ -n $(git status --porcelain src/ | grep "\.css$\|\.scss$") ]]; then
+            echo "COMMIT_TYPE=style" >> $GITHUB_ENV
+          elif [[ -n $(git status --porcelain src/ | grep "\.config\.[jt]s$") ]]; then
+            echo "COMMIT_TYPE=chore" >> $GITHUB_ENV
+          else
+            echo "COMMIT_TYPE=fix" >> $GITHUB_ENV
+          fi
+          # Output for debugging
+          echo "Detected commit type: ${{ env.COMMIT_TYPE }}"
+      
+      - name: Commit and Push Changes
+        if: ${{ env.CHANGES_DETECTED == 'true' }}
+        run: |
+          COMMIT_TYPE="${{ env.COMMIT_TYPE || 'fix' }}"
+          
+          # Get the paths of changed files for commit message
+          CHANGED_FILES=$(git status --porcelain src/ | sed 's/^...//g')
+          
+          # Construct the commit message using Conventional Commits
+          git add src/
+          git commit -m "$COMMIT_TYPE: automated changes to src files
+
+          ${CHANGED_FILES}
+          
+          [skip ci]"
+          
+          # Push changes back to the repository
+          git push

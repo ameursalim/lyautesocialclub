@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState } from "react";
 import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, isToday, parseISO, addDays } from "date-fns";
@@ -7,8 +8,24 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 
+/**
+ * French abbreviated day names used in the calendar header
+ * @constant {string[]}
+ */
 const weekDays = ["DIM.", "LUN.", "MAR.", "MER.", "JEU.", "VEN.", "SAM."];
 
+/**
+ * Defines the time slots available for booking
+ * @typedef {Object} TimeSlot
+ * @property {string} time - The time slot in 12-hour format
+ * @property {number} available - Number of courts available at this time
+ */
+
+/**
+ * Collection of time slots available for booking throughout the day
+ * Each slot shows the time and number of available courts (out of 6)
+ * @type {TimeSlot[]}
+ */
 const timeSlots = [
   { time: "1:00pm", available: 6 },
   { time: "2:00pm", available: 6 },
@@ -19,13 +36,44 @@ const timeSlots = [
   { time: "7:00pm", available: 6 },
 ];
 
+/**
+ * BookingCalendar Component
+ * 
+ * An interactive calendar component that allows users to select dates and time slots
+ * for booking padel courts. Features include:
+ * - Monthly calendar navigation
+ * - Date selection with visual indicators for available, past, and current dates
+ * - Time slot selection with availability indicators
+ * - 12/24 hour time format toggle
+ * - Booking confirmation with toast notifications
+ * 
+ * @example
+ * // Basic usage in a page or component
+ * import BookingCalendar from '@/components/BookingCalendar';
+ * 
+ * const BookingPage = () => (
+ *   <div className="container">
+ *     <h1>Book Your Court</h1>
+ *     <BookingCalendar />
+ *   </div>
+ * );
+ * 
+ * @returns {React.ReactElement} The rendered BookingCalendar component
+ */
 const BookingCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTimeSlot, setSelectedTimeSlot] = useState<string | null>(null);
   const [timeView, setTimeView] = useState<"12h" | "24h">("12h");
 
+  /**
+   * Navigates to the previous month in the calendar view
+   */
   const handlePreviousMonth = () => setCurrentDate(subMonths(currentDate, 1));
+  
+  /**
+   * Navigates to the next month in the calendar view
+   */
   const handleNextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
   const monthStart = startOfMonth(currentDate);
@@ -52,6 +100,13 @@ const BookingCalendar = () => {
 
   const allDays = [...prevMonthDays, ...daysInMonth, ...nextMonthDays];
 
+  /**
+   * Handles user selection of a date in the calendar
+   * Only allows selection of dates within the current month view
+   * Resets any previously selected time slot
+   * 
+   * @param {Date} date - The date clicked by the user
+   */
   const handleDateClick = (date: Date) => {
     if (isSameMonth(date, currentDate)) {
       setSelectedDate(date);
@@ -59,10 +114,23 @@ const BookingCalendar = () => {
     }
   };
 
+  /**
+   * Handles user selection of a time slot
+   * Sets the selected time slot in the component state
+   * 
+   * @param {string} time - The time slot selected by the user (e.g., "2:00pm")
+   */
   const handleTimeSlotClick = (time: string) => {
     setSelectedTimeSlot(time);
   };
 
+  /**
+   * Processes the court booking request
+   * Validates that both a date and time slot are selected before confirming
+   * Shows a success toast if booking is valid, error toast otherwise
+   * 
+   * In a production environment, this would typically call an API to process the booking
+   */
   const handleBooking = () => {
     if (selectedDate && selectedTimeSlot) {
       toast.success("Booking Successful!", {

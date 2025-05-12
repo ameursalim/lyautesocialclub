@@ -1,4 +1,6 @@
 
+"use client";
+
 import { 
   CalendarRange, 
   Users, 
@@ -9,7 +11,7 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const services = [
   {
@@ -67,7 +69,7 @@ const Services = () => {
               </CardHeader>
               <CardContent className="p-6 pt-4">
                 <Button asChild variant="outline" className="mt-4 w-full border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white">
-                  <Link to="/booking">Réserver Maintenant</Link>
+                  <Link href="/booking">Réserver Maintenant</Link>
                 </Button>
               </CardContent>
             </Card>

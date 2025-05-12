@@ -1,69 +1,126 @@
-# Welcome to your Lovable project
+# Padel Page Magic
 
-## Project info
+![Documentation Status](https://img.shields.io/badge/docs-100%25-brightgreen.svg)
+![Next.js](https://img.shields.io/badge/Next.js-14-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-**URL**: https://lovable.dev/projects/9cda2220-c9fd-4e79-bb16-7cabb9ef1704
+A modern, responsive Next.js application for booking padel courts online. This project provides an intuitive interface for users to browse available courts, select time slots, and make bookings.  
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Modern UI**: Clean, responsive design built with Tailwind CSS and shadcn/ui components
+- **Interactive Booking System**: Calendar-based court reservation system
+- **Responsive Design**: Optimized for all devices from mobile to desktop
+- **SEO-Friendly**: Built with Next.js for server-side rendering and improved SEO
+- **Performance Optimized**: Fast loading and interaction times
 
-**Use Lovable**
+## 📋 Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9cda2220-c9fd-4e79-bb16-7cabb9ef1704) and start prompting.
+- Node.js 16.x or later
+- npm or yarn package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Installation
 
-**Use your preferred IDE**
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/padel-page-magic.git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Navigate to project directory
+cd padel-page-magic
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
+# or
+yarn install
 
-Follow these steps:
+# Start development server
+npm run dev
+# or
+yarn dev
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The application will be available at `http://localhost:3000`.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📦 Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+```
+padel-page-magic/
+├── public/            # Static files
+├── src/
+│   ├── app/          # Next.js app directory
+│   │   ├── booking/  # Booking page route
+│   │   ├── layout.tsx   # Root layout
+│   │   └── page.tsx  # Home page
+│   ├── components/   # React components
+│   └── lib/          # Utility functions and shared logic
+├── .gitignore        # Git ignore file
+├── next.config.js    # Next.js configuration
+├── package.json      # Project dependencies
+├── README.md         # Project documentation
+└── tsconfig.json     # TypeScript configuration
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🔧 Usage
+
+### Development
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Production Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+npm start
+```
 
-**Use GitHub Codespaces**
+## 🚢 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project can be easily deployed to Vercel, Netlify, or any other hosting service that supports Next.js applications.
 
-## What technologies are used for this project?
+### Deploying to Vercel
 
-This project is built with .
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Push your code to a GitHub repository
+2. Import the project to Vercel
+3. Vercel will detect Next.js and configure the build settings automatically
 
-## How can I deploy this project?
+## 📚 Documentation
 
-Simply open [Lovable](https://lovable.dev/projects/9cda2220-c9fd-4e79-bb16-7cabb9ef1704) and click on Share -> Publish.
+Comprehensive documentation is available in the `/docs` directory. This documentation is automatically generated from JSDoc comments in the code.
 
-## I want to use a custom domain - is that possible?
+To generate the documentation locally, run:
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+```bash
+npm run docs
+```
+
+## 🧪 Testing
+
+```bash
+npm run test
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes using Conventional Commits format (`git commit -m 'feat: add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👏 Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)

@@ -1,6 +1,7 @@
+"use client";
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -25,7 +26,7 @@ const Navbar = () => {
     >
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/bdf64f8c-a968-4456-971c-199ccbac3b36.png" 
               alt="Lyautey Social Club" 
@@ -35,7 +36,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+            <Link href="/" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               Accueil
             </Link>
             <a href="#services" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
@@ -44,14 +45,14 @@ const Navbar = () => {
             <a href="#about" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               À Propos
             </a>
-            <Link to="/booking" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+            <Link href="/booking" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               Réserver
             </Link>
             <Button 
               asChild 
               className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx"
             >
-              <Link to="/booking">
+              <Link href="/booking">
                 Réserver
               </Link>
             </Button>
@@ -73,7 +74,7 @@ const Navbar = () => {
         <div className="md:hidden glass-dark animate-fade-in">
           <div className="px-4 py-8 space-y-6">
             <Link 
-              to="/" 
+              href="/" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -94,7 +95,7 @@ const Navbar = () => {
               À Propos
             </a>
             <Link 
-              to="/booking" 
+              href="/booking" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -104,7 +105,7 @@ const Navbar = () => {
               asChild 
               className="w-full bg-white text-brand-dark hover:bg-brand-accent hover:text-white"
             >
-              <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/booking" onClick={() => setIsMenuOpen(false)}>
                 Réserver Maintenant
               </Link>
             </Button>

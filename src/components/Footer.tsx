@@ -1,6 +1,8 @@
 
+"use client";
+
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -9,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link to="/" className="inline-block">
+            <Link href="/" className="inline-block">
               <img 
                 src="/lovable-uploads/bdf64f8c-a968-4456-971c-199ccbac3b36.png" 
                 alt="Lyautey Social Club" 
@@ -49,7 +51,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
@@ -64,7 +66,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Book a Court
                 </Link>
               </li>
@@ -76,22 +78,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-4">
               <li>
-                <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Court Rental
                 </Link>
               </li>
               <li>
-                <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Adult Coaching
                 </Link>
               </li>
               <li>
-                <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Kids Programs
                 </Link>
               </li>
               <li>
-                <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Tournaments
                 </Link>
               </li>

@@ -1,6 +1,7 @@
+"use client";
 
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -35,7 +36,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx">
-                <Link to="/booking">
+                <Link href="/booking">
                   Réserver un Terrain <ChevronRight size={16} className="ml-1" />
                 </Link>
               </Button>
