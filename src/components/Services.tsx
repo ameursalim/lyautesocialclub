@@ -27,7 +27,7 @@ const services = [
   {
     icon: <GraduationCap className="h-10 w-10 text-brand-accent" />,
     title: "Programme Enfants",
-    description: "Cours de padel spécialisés pour les enfants de 5 à 16 ans. Nous mettons l'accent sur le plaisir, la coordination et les compétences de base dans un environnement sûr et encourageant."
+    description: "Cours de padel spécialisés pour les enfants de 5 à 10 ans. Nous mettons l'accent sur le plaisir, la coordination et les compétences de base dans un environnement sûr et encourageant."
   },
   {
     icon: <Trophy className="h-10 w-10 text-brand-accent" />,

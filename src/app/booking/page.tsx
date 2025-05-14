@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BookingCalendar from "@/components/BookingCalendar";
+// import BookingCalendar from "@/components/BookingCalendar";
 import { Button } from "@/components/ui/button";
 
 export default function BookingPage() {
@@ -19,29 +19,48 @@ export default function BookingPage() {
               className="inline-flex items-center text-gray-600 hover:text-brand-accent transition-colors mb-6"
             >
               <ChevronLeft size={16} className="mr-1" />
-              Back to Home
+              Retour à l'Accueil
             </Link>
             
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <div>
-                <h1 className="text-3xl sm:text-4xl font-bold text-brand-dark">Book Your Padel Court</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold text-brand-dark">Réserver un Terrain</h1>
                 <p className="text-gray-600 mt-2">
-                  Select a date and time to reserve your court at Lyautey Social Club
+                  Sélectionnez une date et une heure pour réserver votre terrain de padel
                 </p>
               </div>
               
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-brand-accent"></span>
-                <span className="text-gray-600 text-sm">Available Slots</span>
+                <span className="text-gray-600 text-sm">Créneaux Disponibles</span>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Booking Calendar */}
+        {/* Booking Calendar with Cal.com */}
         <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="bg-gray-50 rounded-3xl p-6 md:p-10 mb-12">
-            <BookingCalendar />
+            <h2 className="text-2xl font-semibold text-brand-dark mb-4 text-center">Réservez votre terrain</h2>
+            <p className="text-center text-gray-600 mb-6">Pour réserver, utilisez notre système Cal.com intégré ci-dessous.</p>
+            
+            {/* Version simplifiée de l'intégration Cal.com */}
+            <div className="cal-embed-wrapper" style={{ maxWidth: '1040px', margin: '0 auto', height: '750px' }}>
+              <iframe 
+                src="https://cal.com/salim-ameur-rigyvp/terrain1?embed=true" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                allowFullScreen 
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  border: 'none', 
+                  borderRadius: '8px',
+                  overflow: 'hidden'
+                }}
+              />
+            </div>
           </div>
         </section>
         
@@ -49,35 +68,35 @@ export default function BookingPage() {
         <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-subtle">
-              <h3 className="text-xl font-semibold text-brand-dark mb-4">Court Information</h3>
+              <h3 className="text-xl font-semibold text-brand-dark mb-4">Informations sur les Terrains</h3>
               <ul className="space-y-3 text-gray-600">
-                <li>• 60-minute court sessions</li>
-                <li>• 6 premium glass-walled courts</li>
-                <li>• Climate controlled indoor facility</li>
-                <li>• Professional-grade artificial turf</li>
-                <li>• Court lighting for evening play</li>
+                <li>• Séances de 60 minutes</li>
+                <li>• 6 terrains premium avec parois en verre</li>
+                <li>• Installation intérieure à climat contrôlé</li>
+                <li>• Gazon artificiel de qualité professionnelle</li>
+                <li>• Éclairage pour jeu en soirée</li>
               </ul>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-subtle">
-              <h3 className="text-xl font-semibold text-brand-dark mb-4">Booking Policy</h3>
+              <h3 className="text-xl font-semibold text-brand-dark mb-4">Politique de Réservation</h3>
               <ul className="space-y-3 text-gray-600">
-                <li>• Bookings up to 7 days in advance</li>
-                <li>• Cancellations accepted up to 24 hours before</li>
-                <li>• Locker rooms and showers available</li>
-                <li>• Equipment rental available on site</li>
-                <li>• Arrive 15 minutes before your session</li>
+                <li>• Réservations jusqu'à 7 jours à l'avance</li>
+                <li>• Annulations acceptées jusqu'à 24 heures avant</li>
+                <li>• Vestiaires et douches disponibles</li>
+                <li>• Location d'équipement sur place</li>
+                <li>• Arrivez 15 minutes avant votre séance</li>
               </ul>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-subtle">
-              <h3 className="text-xl font-semibold text-brand-dark mb-4">Coaching Services</h3>
+              <h3 className="text-xl font-semibold text-brand-dark mb-4">Services d'Entrainement</h3>
               <ul className="space-y-3 text-gray-600">
-                <li>• Private lessons (1-2 players)</li>
-                <li>• Group sessions (3-4 players)</li>
-                <li>• Kids programs (ages 5-16)</li>
-                <li>• Beginner to advanced levels</li>
-                <li>• Add coaching during court booking</li>
+                <li>• Leçons privées (1-2 joueurs)</li>
+                <li>• Sessions de groupe (3-4 joueurs)</li>
+                <li>• Programmes pour enfants (5-16 ans)</li>
+                <li>• Niveaux débutant à avancé</li>
+                <li>• Ajoutez un coach lors de la réservation</li>
               </ul>
             </div>
           </div>
@@ -85,33 +104,33 @@ export default function BookingPage() {
         
         {/* FAQ Section */}
         <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-brand-dark mb-10 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-brand-dark mb-10 text-center">Questions Fréquentes</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                question: "How far in advance can I book a court?",
-                answer: "You can book courts up to 7 days in advance. For regular weekly bookings, we offer membership packages that allow bookings up to 14 days ahead."
+                question: "Combien de temps à l'avance puis-je réserver un terrain?",
+                answer: "Vous pouvez réserver des terrains jusqu'à 7 jours à l'avance. Pour les réservations hebdomadaires régulières, nous proposons des forfaits d'adhésion qui permettent des réservations jusqu'à 14 jours à l'avance."
               },
               {
-                question: "What is your cancellation policy?",
-                answer: "Cancellations made at least 24 hours before your reserved time are fully refundable. Cancellations with less than 24 hours notice are non-refundable."
+                question: "Quelle est votre politique d'annulation?",
+                answer: "Les annulations effectuées au moins 24 heures avant l'heure réservée sont entièrement remboursables. Les annulations avec moins de 24 heures de préavis ne sont pas remboursables."
               },
               {
-                question: "Do you provide padel equipment?",
-                answer: "Yes, we offer premium padel rackets and balls for rent. Equipment rental is not included in court booking and can be added during the checkout process."
+                question: "Fournissez-vous l'équipement de padel?",
+                answer: "Oui, nous proposons des raquettes et des balles de padel premium à la location. La location d'équipement n'est pas incluse dans la réservation du terrain et peut être ajoutée lors du processus de paiement."
               },
               {
-                question: "Can I book a coach with my court reservation?",
-                answer: "Absolutely! You can add coaching services during the booking process. We offer private and group coaching for all skill levels."
+                question: "Puis-je réserver un entraineur avec ma réservation de terrain?",
+                answer: "Absolument! Vous pouvez ajouter des services d'entrainement lors du processus de réservation. Nous proposons des cours particuliers et en groupe pour tous les niveaux."
               },
               {
-                question: "Are there changing facilities available?",
-                answer: "Yes, we provide modern locker rooms with showers, toilets, and changing areas for all players."
+                question: "Y a-t-il des vestiaires disponibles?",
+                answer: "Oui, nous mettons à disposition des vestiaires modernes avec douches, toilettes et espaces de change pour tous les joueurs."
               },
               {
-                question: "How long is each court session?",
-                answer: "Standard court bookings are for 60-minute sessions. If you need more time, you can book consecutive slots."
+                question: "Quelle est la durée de chaque séance?",
+                answer: "Les réservations standard de terrain sont pour des séances de 60 minutes. Si vous avez besoin de plus de temps, vous pouvez réserver des créneaux consécutifs."
               }
             ].map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-6">

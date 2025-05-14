@@ -39,21 +39,24 @@ const Navbar = () => {
             <Link href="/" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               Accueil
             </Link>
-            <a href="#services" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+            <Link href="/#services" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               Services
-            </a>
-            <a href="#about" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+            </Link>
+            <Link href="/#about" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
               À Propos
-            </a>
-            <Link href="/booking" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
-              Réserver
+            </Link>
+            <Link href="/trainers" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+              Coaching
+            </Link>
+            <Link href="/tarifs" className="text-brand-dark font-medium hover:text-brand-accent transition-colors">
+              Tarifs
             </Link>
             <Button 
               asChild 
               className="bg-brand-dark text-white hover:bg-brand-accent btn-hover-fx"
             >
               <Link href="/booking">
-                Réserver
+                Réserver un Terrain
               </Link>
             </Button>
           </nav>
@@ -80,33 +83,40 @@ const Navbar = () => {
             >
               Accueil
             </Link>
-            <a 
-              href="#services" 
+            <Link 
+              href="/#services" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </a>
-            <a 
-              href="#about" 
+            </Link>
+            <Link 
+              href="/#about" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
               À Propos
-            </a>
+            </Link>
             <Link 
-              href="/booking" 
+              href="/trainers" 
               className="block text-lg font-medium text-white hover:text-brand-accent"
               onClick={() => setIsMenuOpen(false)}
             >
-              Réserver
+              Coaching
+            </Link>
+            <Link 
+              href="/tarifs" 
+              className="block text-lg font-medium text-white hover:text-brand-accent"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Tarifs
             </Link>
             <Button 
               asChild 
               className="w-full bg-white text-brand-dark hover:bg-brand-accent hover:text-white"
             >
               <Link href="/booking" onClick={() => setIsMenuOpen(false)}>
-                Réserver Maintenant
+                Réserver un Terrain
               </Link>
             </Button>
           </div>

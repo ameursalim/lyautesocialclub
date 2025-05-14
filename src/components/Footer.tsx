@@ -19,7 +19,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-gray-400 text-sm">
-              Lyautey Social Club offers premium padel facilities and coaching to players of all levels. Join our vibrant community of padel enthusiasts.
+              Lyautey Social Club offre des installations de padel de qualité et des cours pour les joueurs de tous niveaux. Rejoignez notre communauté dynamique de passionnés de padel.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -48,26 +48,26 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">Liens Rapides</h3>
             <ul className="space-y-4">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
+                  Accueil
                 </Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/#services" className="text-gray-400 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </a>
+                <Link href="/#about" className="text-gray-400 hover:text-white transition-colors">
+                  À Propos
+                </Link>
               </li>
               <li>
                 <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Book a Court
+                  Réserver
                 </Link>
               </li>
             </ul>
@@ -75,26 +75,26 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-6">Nos Services</h3>
             <ul className="space-y-4">
               <li>
                 <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Court Rental
+                  Location de Terrains
+                </Link>
+              </li>
+              <li>
+                <Link href="/trainers" className="text-gray-400 hover:text-white transition-colors">
+                  Cours pour Adultes
+                </Link>
+              </li>
+              <li>
+                <Link href="/trainers" className="text-gray-400 hover:text-white transition-colors">
+                  Programmes Enfants
                 </Link>
               </li>
               <li>
                 <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Adult Coaching
-                </Link>
-              </li>
-              <li>
-                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Kids Programs
-                </Link>
-              </li>
-              <li>
-                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Tournaments
+                  Tournois
                 </Link>
               </li>
             </ul>
@@ -102,17 +102,17 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-6">Contactez-Nous</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={18} className="text-brand-accent mr-2 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  123 Padel Avenue, Lyautey City, 10001
+                  123 Avenue du Padel, Lyautey, 10001
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-brand-accent mr-2 flex-shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+212 661-076802</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-brand-accent mr-2 flex-shrink-0" />
@@ -128,17 +128,17 @@ const Footer = () => {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
-              &copy; {new Date().getFullYear()} Lyautey Social Club. All rights reserved.
+              &copy; {new Date().getFullYear()} Lyautey Social Club. Tous droits réservés.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-500 hover:text-gray-400 text-sm">
-                Privacy Policy
+                Politique de Confidentialité
               </a>
               <a href="#" className="text-gray-500 hover:text-gray-400 text-sm">
-                Terms of Service
+                Conditions d'Utilisation
               </a>
               <a href="#" className="text-gray-500 hover:text-gray-400 text-sm">
-                Cookie Policy
+                Politique des Cookies
               </a>
             </div>
           </div>

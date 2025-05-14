@@ -14,16 +14,16 @@ export default function NotFound() {
           </svg>
         </div>
 
-        <h1 className="text-4xl font-bold text-brand-dark mb-4">Page Not Found</h1>
+        <h1 className="text-4xl font-bold text-brand-dark mb-4">Page Non Trouvée</h1>
         
         <p className="text-xl text-gray-600 mb-8">
-          The page you are looking for doesn't exist or has been moved.
+          La page que vous recherchez n'existe pas ou a été déplacée.
         </p>
         
         <Button asChild size="lg" className="animate-pulse-subtle">
           <Link href="/" className="inline-flex items-center">
             <Home className="mr-2 h-5 w-5" />
-            Back to Home
+            Retour à l'accueil
           </Link>
         </Button>
       </div>
