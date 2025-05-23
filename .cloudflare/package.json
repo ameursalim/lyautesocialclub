@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "main": "workers-site/index.js",
+  "name": "lyautey-social-club-cloudflare-config",
+  "version": "1.0.0",
+  "dependencies": {}
+}
