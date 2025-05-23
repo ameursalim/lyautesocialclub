@@ -5,9 +5,6 @@ const nextConfig = {
     domains: [],
     formats: ['image/webp'],
   },
-  experimental: {
-    optimizeFonts: true,
-  },
   // Optimisation du chargement
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
