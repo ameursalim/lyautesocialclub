@@ -4,19 +4,20 @@ const nextConfig = {
   images: {
     domains: [],
     formats: ['image/webp'],
-    unoptimized: true, // Required for Cloudflare Pages
+    unoptimized: true, // Required for static export
   },
   // Optimisation du chargement
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Cloudflare Pages configuration
-  output: 'standalone',
+  // Change to export for static site generation
+  output: 'export',
   // Disable server-side telemetry in production
   trailingSlash: false,
-  // Essential for Cloudflare Pages to handle Next.js correctly
+  // No experimental features needed for static export
   experimental: {},
-  serverExternalPackages: ['mongoose']
+  // Not needed for static export
+  // serverExternalPackages: ['mongoose']
 };
 
 module.exports = nextConfig;
