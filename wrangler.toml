@@ -2,7 +2,10 @@
 
 [build]
 command = "npm run build"
-publishDirectory = ".next"
+
+# The directory containing your static files after the build process
+pages_build_output_dir = ".next"
 
 [build.environment]
 NODE_VERSION = "18"
+NPM_FLAGS = "--no-frozen-lockfile"
