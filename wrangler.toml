@@ -1,16 +1,8 @@
-name = "lyautey-social-club"
-main = "./.next/server/middleware-edge.js"
-compatibility_date = "2023-04-20"
-compatibility_flags = ["nodejs_compat"]
+# Configuration for Cloudflare Pages
 
 [build]
 command = "npm run build"
+publishDirectory = ".next"
 
-[site]
-bucket = "./.next/static"
-
-[build.upload]
-format = "directory"
-
-# Specify the directory where your static assets are
-pages_build_output_dir = ".next/standalone"
+[build.environment]
+NODE_VERSION = "18"

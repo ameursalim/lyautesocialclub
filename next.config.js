@@ -15,9 +15,8 @@ const nextConfig = {
   // Disable server-side telemetry in production
   trailingSlash: false,
   // Essential for Cloudflare Pages to handle Next.js correctly
-  experimental: {
-    serverComponentsExternalPackages: ['mongoose'],
-  }
+  experimental: {},
+  serverExternalPackages: ['mongoose']
 };
 
 module.exports = nextConfig;
