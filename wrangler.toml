@@ -4,7 +4,10 @@
 command = "npm run build"
 
 # The directory containing your static files after the build process
-pages_build_output_dir = "out"
+build_output_directory = "out"
+
+[site]
+bucket = "./out"
 
 [build.environment]
 NODE_VERSION = "18"
